@@ -114,20 +114,29 @@ function DiceRoll(){
     const die1 = Math.floor(Math.random()*6+1);
     // 8c
     const die2 = Math.floor(Math.random()*6+1);
-    // 8d--could use a Ternary here too
-    if (die1 !== 1 || die2 !== 1){
-        return(
-            <div>
-                <h1>{die1} & {die2}</h1>
-            </div>
-        );
-    }else {
-        return(
-            <div>
-                <h1>SNAKE EYES</h1>
-            </div>
-        );
-    }
+    // 8d--could use either if-else or Ternary
+    // if (die1 !== 1 || die2 !== 1){
+    //     return(
+    //         <div>
+    //             <h1>{die1} & {die2}</h1>
+    //         </div>
+    //     );
+    // }else {
+    //     return(
+    //         <div>
+    //             <h1>SNAKE EYES</h1>
+    //         </div>
+    //     );
+    // }
+    return (die1 === 1 && die2 === 1)?
+                <div>
+                    <h1>SNAKE EYES</h1>
+                </div>
+    : 
+        <div>
+            <h1>{die1} & {die2}</h1>
+        </div>
+    ;
 }
 // 8e
 ReactDOM.render(
