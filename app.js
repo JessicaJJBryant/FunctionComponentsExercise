@@ -2,7 +2,7 @@
 
 // 1a
 function Ghostbusters(){
-    return `Who you gonna call?`
+    return `Who you gonna call?`;
 }
 // 1b
 ReactDOM.render(
@@ -13,7 +13,7 @@ ReactDOM.render(
 
 // 2a
 function Tagline(){
-    return <h1>We're ready to believe you.</h1>
+    return <h1>We're ready to believe you.</h1>;
 }
 // 2b
 ReactDOM.render(
@@ -60,7 +60,7 @@ ReactDOM.render(
 
 // 5a
 function GhostbustersLogo(){
-    return <img src="https://cdn.pixabay.com/photo/2016/07/13/18/41/ghostbusters-1515155_1280.jpg" alt="Ghostbusters Logo" />
+    return <img src="https://cdn.pixabay.com/photo/2016/07/13/18/41/ghostbusters-1515155_1280.jpg" alt="Ghostbusters Logo" />;
 }
 // 5b
 ReactDOM.render(
@@ -128,15 +128,21 @@ function DiceRoll(){
     //         </div>
     //     );
     // }
-    return (die1 === 1 && die2 === 1)?
+    // return (die1 === 1 && die2 === 1)?
+    //     <div>
+    //         <h1>SNAKE EYES</h1>
+    //     </div>
+    // : 
+    //     <div>
+    //         <h1>{die1} & {die2}</h1>
+    //     </div>
+    // ;
+    // BETTER TERNARY (LESS CODE):
+    return(
         <div>
-            <h1>SNAKE EYES</h1>
+            <h1>{(die1 === 1 && die2 === 1) ? `SNAKE EYES` : `${die1} & ${die2}`}</h1>
         </div>
-    : 
-        <div>
-            <h1>{die1} & {die2}</h1>
-        </div>
-    ;
+    );
 }
 // 8e
 ReactDOM.render(
