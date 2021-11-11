@@ -129,9 +129,9 @@ function DiceRoll(){
     //     );
     // }
     return (die1 === 1 && die2 === 1)?
-                <div>
-                    <h1>SNAKE EYES</h1>
-                </div>
+        <div>
+            <h1>SNAKE EYES</h1>
+        </div>
     : 
         <div>
             <h1>{die1} & {die2}</h1>
