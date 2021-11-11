@@ -106,3 +106,31 @@ ReactDOM.render(
     <GhostbustersAll/>,
     document.getElementById(`root`)
 );
+
+
+// 8a
+function DiceRoll(){
+    // 8b
+    const die1 = Math.floor(Math.random()*6+1);
+    // 8c
+    const die2 = Math.floor(Math.random()*6+1);
+    // 8d--could use a Ternary here too
+    if (die1 !== 1 || die2 !== 1){
+        return(
+            <div>
+                <h1>{die1} & {die2}</h1>
+            </div>
+        );
+    }else {
+        return(
+            <div>
+                <h1>SNAKE EYES</h1>
+            </div>
+        );
+    }
+}
+// 8e
+ReactDOM.render(
+    <DiceRoll/>,
+    document.getElementById(`root`)
+);
